@@ -29,9 +29,9 @@ export const ShoppingPage = () => {
                     {
                         ({ reset, count, isMaxCountReached, increaseBy}: ProductCardHandler)=> (
                             <>
-                                <ProductCard.Image className="custom-image" />
-                                <ProductCard.Title className="text-bold"/>
-                                <ProductCard.Buttons className="custom-buttons" />
+                                <ProductImage className="custom-image" />
+                                <ProductTitle className="text-bold"/>
+                                <ProductButtons className="custom-buttons" />
                                 
                                 <button onClick={reset}>Reset</button>
                                 <button onClick={()=>increaseBy(-2)} >-2</button>
