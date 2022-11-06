@@ -1,5 +1,4 @@
 import { ProductCard, ProductImage, ProductTitle, ProductButtons } from '../components';
-import '../styles/custom-styles.css';
 
 import {products} from '../data/products'
 import { ProductCardHandler } from '../interfaces/interfaces';
@@ -19,7 +18,6 @@ export const ShoppingPage = () => {
                 <ProductCard 
                     key={product.id}
                     product={ product }
-                    className="bg-dark text-white"
                     initialValues={{
                         count: 4,
                         maxCount: 10
@@ -29,14 +27,10 @@ export const ShoppingPage = () => {
                     {
                         ({ reset, count, isMaxCountReached, increaseBy}: ProductCardHandler)=> (
                             <>
-                                <ProductImage className="custom-image" />
-                                <ProductTitle className="text-bold"/>
-                                <ProductButtons className="custom-buttons" />
-                                
-                                <button onClick={reset}>Reset</button>
-                                <button onClick={()=>increaseBy(-2)} >-2</button>
-                                <button onClick={()=>increaseBy(+2)} style={{display: `${isMaxCountReached ? 'none' : 'block'}`}}>+2</button>
-                                <span>{count}</span>
+                                <ProductImage   />
+                                <ProductTitle   />
+                                <ProductButtons />
+
                             </>
                         )
                     }
