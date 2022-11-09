@@ -1,0 +1,48 @@
+[
+    {
+        "type": "input",
+        "name": "firstName",
+        "placeholder": "Name",
+        "label": "First Name",
+        "value": "",
+        "validations": [
+            {"type": "required", "errorText": "Required field"},
+            {"type": "minLength", "value":5, "errorText": "Must be more than 5 characters"}
+        ]
+    },
+    {
+        "type": "input",
+        "name": "lastName",
+        "placeholder": "Last Name",
+        "label": "Last Name",
+        "value": "",
+        "validations": [
+            {"type": "required", "errorText": "Required field"}
+        ]
+    },
+    {
+        "type": "email",
+        "name": "email",
+        "placeholder": "Email",
+        "label": "Email",
+        "value": "",
+        "validations": [
+            {"type": "required", "errorText": "Required field"},
+            {"type": "email", "errorText": "Wrong email format"}
+        ]
+    },
+    {
+        "type": "select",
+        "name": "favoriteGame",
+        "label": "Favorite Game",
+        "value": "",
+        "validations": [
+            {"type": "required", "errorText": "Required field"}
+        ],
+        "options": [
+            {"id": 1,"value": "Super Smash"},
+            {"id": 2,"value": "Colin Mcrae"},
+            {"id": 3,"value": "NFS Most Wanted"}
+        ]
+    }
+]
